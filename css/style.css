@@ -346,6 +346,19 @@ img {
   background-color: var(--first-color-alt);
 }
 
+.button-demo {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+}
+
+.button-demo:hover {
+  background-color: var(--first-color-alt);
+}
+
 .button_icon {
   font-size: 1.25rem;
   margin-left: var(--mb-0-5);
@@ -735,9 +748,11 @@ img {
   margin: 0 var(--mb-1);
   cursor: pointer;
 }
+
 .portfolio_content {
   background-color: var(--container-color);
   border-radius: 0.5rem;
+  display: grid;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
@@ -745,16 +760,16 @@ img {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 .portfolio_img {
-  width: 300px;
+  width: 400px;
   transition: 0.4s;
+  margin-bottom: -15px;
 }
 .portfolio_data {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .portfolio_title {
   margin: var(--mb-1) 0;
   font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
 }
 .portfolio_subtitle {
   font-size: var(--small-font-size);

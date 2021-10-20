@@ -762,7 +762,7 @@ img {
 .portfolio_img {
   width: 400px;
   transition: 0.4s;
-  margin-bottom: -15px;
+  margin-bottom: 1px;
 }
 .portfolio_data {
   padding: 0.5rem;
@@ -795,176 +795,49 @@ img {
   font-weight: var(--font-semi-bold);
 }
 
-/* portfolio lama */
-/* .portfolio_container {
-  overflow: initial;
-}
-
-.portfolio_content {
-  padding: 0 1.5rem;
-}
-
-.portfolio_img {
-  width: 265px;
-  border-radius: 0.5rem;
-  justify-self: center;
-}
-
-.portfolio_title {
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-0-5);
-}
-
-.portfolio_description {
-  margin-bottom: var(--mb-0-75);
-} */
-
-/* .portfolio_button:hover .button_icon {
-  transform: translateX(0.25rem);
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  content: "";
-}
-
-.swiper-portfolio-icon {
-  font-size: 2rem;
-  color: var(--first-color);
-}
-
-.swiper-button-prev {
-  left: -0.5rem;
-}
-
-.swiper-button-next {
-  right: -0.5rem;
-}
-
-.swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: -2.5rem;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: var(--first-color);
-}
-
-.swiper-button-prev,
-.swiper-button-next,
-.swiper-pagination-bullet {
-  outline: none;
-} */
-
-/* portfolio popup */
-/* .portfolio-popup {
-  background-color: var(--body-color);
+.portfolio_modal {
   position: fixed;
-  left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: var(--z-fixed);
-  overflow-y: auto;
-}
-.portfolio-popup .pp-img {
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.5);
-}
-.portfolio-popup .pp-main {
-  min-height: 100vh;
-  max-width: 1350px;
-  width: 85%;
-  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 1rem;
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
 }
-.portfolio-popup .pp-main-inner {
-  padding: 70px 0 50px;
+
+.portfolio_modal-content {
   position: relative;
-}
-.portfolio-popup .pp-project-details-btn {
-  position: absolute;
-  left: 0;
-  border-radius: 30px;
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi-bold);
-  color: var(--first-color);
-  top: 15px;
-  cursor: pointer;
-  padding: 0 15px;
-  height: 40px;
-  line-height: 40px;
-  transition: all 0.3s ease;
-}
-.portfolio-popup .pp-project-details-btn i {
-  margin-left: 4px;
-}
-.portfolio-popup .pp-project-details-btn::after {
-  border-radius: 30px;
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
 }
 
-.portfolio-popup .pp-close {
+.portfolio_modal-title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1-5);
+}
+
+.portfolio_modal-close {
   position: absolute;
+  top: -0.4rem;
   right: 0;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  top: 15px;
-  text-align: center;
-  line-height: 35px;
-  font-size: var(--mb-1-5);
-  color: var(--first-color-alt);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.portfolio-popup .pp-close::after {
-  border-radius: 50%;
-}
-.portfolio-popup .pp-counter {
-  position: absolute;
-  right: 0;
-  height: 40px;
-  line-height: 40px;
-  bottom: 5px;
-  font-size: var(--mb-1);
-  color: var(--first-color-alt);
-}
-.portfolio-popup .pp-prev,
-.portfolio-popup .pp-next {
-  position: fixed;
-  top: 50%;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  font-size: var(--mb-1-5);
-  cursor: pointer;
-  z-index: var(--z-fixed);
+  font-size: 1.5rem;
   color: var(--first-color);
-  transition: all 0.3s ease;
-  opacity: 0.6;
+  cursor: pointer;
 }
-.portfolio-popup .pp-prev:hover,
-.portfolio-popup .pp-next:hover {
+
+.active-portfolio {
   opacity: 1;
+  visibility: visible;
 }
-.portfolio-popup .pp-prev i,
-.portfolio-popup .pp-next i {
-  line-height: 40px;
-}
-
-.portfolio-popup .pp-prev {
-  left: 15px;
-  transform: rotate(-180deg);
-}
-.portfolio-popup .pp-next {
-  right: 15px;
-} */
-
 /* ================== CONTACT ME================ */
 .contact_container {
   row-gap: 3rem;

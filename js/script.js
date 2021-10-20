@@ -91,19 +91,29 @@ modalCloses.forEach((modalClose) => {
   });
 });
 
-// ============== PORTFOLIO SWIPER ================
-// let swiper = new Swiper(".portfolio_container", {
-//   cssMode: true,
-//   loop: true,
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
+// ============== PORTFOLIO MODAL ================
+const portfolioViews = document.querySelectorAll(".portfolio_modal"),
+  portfolioBtns = document.querySelectorAll(".portfolio_button"),
+  portfolioCloses = document.querySelectorAll(".portfolio_modal-close");
+
+let portfolio = function (portfolioClick) {
+  portfolioViews[portfolioClick].classList.add("active-portfolio");
+};
+
+portfolioBtns.forEach((portfolioBtn, i) => {
+  portfolioBtn.addEventListener("click", () => {
+    portfolio(i);
+  });
+});
+
+portfolioCloses.forEach((portfolioClose) => {
+  portfolioClose.addEventListener("click", () => {
+    portfolioViews.forEach((portfolioView) => {
+      portfolioView.classList.remove("active-portfolio");
+    });
+  });
+});
+
 // =========== MIXITUP FILTER ================
 const mixer = mixitup(".portfolio_container", {
   selectors: {

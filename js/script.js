@@ -135,16 +135,6 @@ function activePortfolio() {
 }
 linkPortfolio.forEach((l) => l.addEventListener("click", activePortfolio));
 
-// const navLink = document.querySelectorAll(".nav_link");
-
-// function linkAction() {
-//   const navMenu = document.getElementById("nav-menu");
-//   // When we click on each nav__link, we remove the show-menu class
-//   navMenu.classList.remove("show-menu");
-// }
-// navLink.forEach((n) => n.addEventListener("click", linkAction));
-
-// ============== TESTIMONIAL =====================
 // ============== SCROLL SECTION ACTIVES LINK ================
 const sections = document.querySelectorAll("section[id]");
 
@@ -213,4 +203,41 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
-// ============== REMOVE MENU MOBILE ================
+// ============== CONTACT FORM SEND ================
+const scriptURL = "https://script.google.com/macros/s/AKfycbw8Nzx7jXhh8XNTGZT2KbGxMJ5bdCh4ikfpkQgHD8UG0UT3l5_9BmKab7P1UV2fYmkVSg/exec";
+const form = document.forms["contact-form-portfolio"];
+const btnKirim = document.querySelector(".button-send");
+const btnSpin = document.querySelector(".button-loading");
+const myAlert = document.querySelector(".alert");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  // ketika tombol submit diklik
+  // tampilkan tombol loading, hilangkan submit
+  btnKirim.classList.toggle("button-send-spin");
+  btnSpin.classList.toggle("button-send-spin");
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      // tampilkan tombol kirim, hilangkan loading
+      btnKirim.classList.toggle("button-send-spin");
+      btnSpin.classList.toggle("button-send-spin");
+      // tampil alert
+      myAlert.classList.toggle("alert-none");
+      // reset form
+      form.reset();
+      console.log("Success!", response);
+    })
+    .catch((error) => console.error("Error!", error.message));
+});
+
+const close = document.getElementsByClassName("closebtn");
+
+for (var i = 0; i < close.length; i++) {
+  close[i].onclick = function () {
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function () {
+      div.style.display = "none";
+    }, 600);
+  };
+}

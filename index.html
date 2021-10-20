@@ -8,6 +8,9 @@
     <!-- =========================UNICONS======================================== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 
+    <!-- ======================== FONT AWESOME ======================================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- ====================================CSS================================== -->
     <link rel="stylesheet" href="css/style.css" />
     <title>Muhammad jarjis</title>
@@ -824,6 +827,11 @@
         <h2 class="section_title">Contact Me</h2>
         <span class="section_subtitle">Get in touch</span>
 
+        <div class="alert success container alert-none">
+          <span class="closebtn">&times;</span>  
+          <strong>Success!</strong> Thankyou for filling the form.
+        </div>
+
         <div class="contact_container container grid">
           <div>
             <div class="contact_information">
@@ -853,28 +861,34 @@
               </div>
             </div>
           </div>
+       
 
-          <form action="" class="contact_form grid">
+          <form action="" class="contact_form grid" name="contact-form-portfolio">
             <div class="contact_inputs grid">
               <div class="contact_content">
                 <label for="" class="contact_label">Name</label>
-                <input type="text" class="contact_input" />
+                <input type="text" class="contact_input" name="name"/>
               </div>
               <div class="contact_content">
                 <label for="" class="contact_label">Email</label>
-                <input type="email" class="contact_input" />
+                <input type="email" class="contact_input" name="email"/>
               </div>
             </div>
             <div class="contact_content">
               <label for="" class="contact_label">Message</label>
-              <textarea name="" id="" cols="0" rows="7" class="contact_input"></textarea>
+              <textarea name="message" id="" cols="0" rows="7" class="contact_input"></textarea>
             </div>
 
             <div>
-              <a href="#" class="button button-flex">
+              <button type="submit" class="button-send">
                 Send message
-                <i class="uil uil-message button_icon"></i>
-              </a>
+                <i class="fa fa-paper-plane button_icon "></i>
+              </button>
+
+              <button type="submit" class="button-loading button-send-spin">
+                Loading
+                <i class="fa fa-spinner fa-spin button_icon"></i>
+              </button>
             </div>
           </form>
         </div>

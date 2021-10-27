@@ -1032,7 +1032,7 @@ button {
 /* ===========================MEDIA QUERRIES============================= */
 
 /* small */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 414px) {
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -1074,6 +1074,13 @@ button {
   .services_modal {
     padding: 0 1.5rem;
   }
+  .portfolio_item {
+    margin: 0 var(--mb-0-25);
+    cursor: pointer;
+  }
+  .alert {
+    width: 90%;
+  }
 }
 
 /* medium */
@@ -1107,6 +1114,10 @@ button {
 
   .portfolio_img {
     width: 100%;
+  }
+
+  .alert {
+    width: 80%;
   }
 }
 
@@ -1265,6 +1276,9 @@ button {
   .footer_copy {
     margin-top: 4.5rem;
   }
+  .alert {
+    width: 80%;
+  }
 }
 
 /* large */
@@ -1303,5 +1317,8 @@ button {
   }
   .footer_title {
     font-size: var(--h1-font-size);
+  }
+  .alert {
+    width: 80%;
   }
 }
